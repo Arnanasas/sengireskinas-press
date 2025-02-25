@@ -109,3 +109,61 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+function enqueue_leaflet_scripts() {
+    wp_enqueue_style('leaflet-css', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+    wp_enqueue_script('leaflet-js', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_leaflet_scripts');
+
+
+function display_library_map() {
+    ob_start(); ?>
+    <div id="library-map" class="w-full z-0" style="height: 640px !important"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+			var map = L.map("library-map").setView([55.1694, 23.8813], 7);
+            var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 20
+            });
+            CartoDB_DarkMatter.addTo(map);
+
+			var libraryIcon = L.icon({
+                iconUrl: '<?php echo get_template_directory_uri(); ?>/resources/images/pin_leaflet.png', // Path to your custom pin
+                iconSize: [24, 28], // Size of the icon
+                iconAnchor: [12, 28], // Anchor point (center-bottom)
+                popupAnchor: [0, -28] // Adjusts popup position
+            });
+
+            var libraries = [
+                <?php
+                $args = array(
+                    'post_type' => 'bibliotekos',
+                    'posts_per_page' => -1
+                );
+                $query = new WP_Query($args);
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    $lat = get_field('latitude');
+                    $lng = get_field('longitude');
+                    $name = get_the_title();
+                    $website = get_field('website');
+
+                    echo "{ lat: $lat, lng: $lng, name: '" . esc_js($name) . "', website: '" . esc_url($website) . "' },";
+                }
+                wp_reset_postdata();
+                ?>
+            ];
+
+            libraries.forEach(function(library) {
+                var marker = L.marker([library.lat, library.lng], { icon: libraryIcon }).addTo(map);
+                marker.bindPopup("<b>" + library.name + "</b><br><a href='" + library.website + "' target='_blank'>Aplankyti puslapį</a>");
+            });
+        });
+    </script>
+    <?php return ob_get_clean();
+}
+add_shortcode('library_map', 'display_library_map');
+

@@ -1,19 +1,51 @@
-.shrink-logo {
-  width: 120px;
+// .shrink-logo {
+//   width: 120px;
+//   transition: all 0.3s ease-in-out;
+// }
+
+// .normal-logo {
+//   width: 550px;
+//   transition: all 0.3s ease-in-out;
+// }
+
+
+/* Header default state */
+#site-header {
   transition: all 0.3s ease-in-out;
 }
 
-.normal-logo {
-  width: 50%;
-  transition: all 0.3s ease-in-out;
+/* Logo default size */
+#site-logo {
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: scale(3);
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, -50%) scale(1);
+  max-height: 120px; /* Adjust based on design */
 }
+
+/* Logo shrink effect */
+#site-header.scrolled #site-logo {
+  transform: translate(-50%, -50%) scale(0.6);
+  top: 100%; /* Adjust to move closer to nav links */
+  opacity: 0.9;
+}
+
+/* Header Shrinks */
+#site-header.scrolled {
+  padding: 10px 0;
+  backdrop-filter: blur(10px);
+}
+
 
 .clip-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mask-image: url("../images/mask1.png");
-  -webkit-mask-image: url("../images/mask1.png");
+  mask-image: url("../resources/images/mask1.png");
+  -webkit-mask-image: url("../resources/images/mask1.png");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -23,8 +55,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mask-image: url("../images/mask2.png");
-  -webkit-mask-image: url("../images/mask2.png");
+  mask-image: url("../resources/images/mask2.png");
+  -webkit-mask-image: url("../resources/images/mask2.png");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;

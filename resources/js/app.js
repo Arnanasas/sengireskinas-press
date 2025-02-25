@@ -1,8 +1,12 @@
-// Navigation toggle
-window.addEventListener('load', function () {
-      let main_navigation = document.querySelector('#primary-menu');
-      document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
-            e.preventDefault();
-            main_navigation.classList.toggle('hidden');
-      });
+window.addEventListener("load", function () {
+  const header = document.getElementById("site-header");
+  const logo = document.getElementById("site-logo");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
 });

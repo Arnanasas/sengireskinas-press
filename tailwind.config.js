@@ -1,15 +1,21 @@
 module.exports = {
-  purge: ["./**/*.html", "./**/*.js"],
+  content: [
+    "./*.php",
+    "./**/*.php",
+    "./resources/js/*.js",
+    "./resources/css/*.css",
+    "./safelist.txt",
+  ],
   theme: {
     extend: {
       colors: {
         primary: {
           green: "#C8F27E",
         },
-        danger: "#ef4444", // Red
-        success: "#22c55e", // Green
-        warning: "#facc15", // Yellow
-        info: "#3b82f6", // Blue
+        danger: "#ef4444",
+        success: "#22c55e",
+        warning: "#facc15",
+        info: "#3b82f6",
         white: "#ffffff",
         black: "#000000",
       },
