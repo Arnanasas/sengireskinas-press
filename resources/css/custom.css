@@ -1,0 +1,78 @@
+.shrink-logo {
+  width: 120px;
+  transition: all 0.3s ease-in-out;
+}
+
+.normal-logo {
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.clip-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: url("../images/mask1.png");
+  -webkit-mask-image: url("../images/mask1.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.clip-image2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: url("../images/mask2.png");
+  -webkit-mask-image: url("../images/mask2.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Owners", sans-serif;
+  font-weight: medium;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 0.5rem;
+    font-size: 11px;
+    letter-spacing: 0em;
+  }
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; /* Aspect ratio for 16:9 video */
+  mask-image: url("../images/iframe-frame.png");
+  -webkit-mask-image: url("../images/iframe-frame.png");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  overflow: hidden;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+/*# sourceMappingURL=custom.css.map */

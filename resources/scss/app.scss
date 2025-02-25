@@ -1,0 +1,29 @@
+@use "sass:meta";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Owners Narrow";
+  src: url("../fonts/OwnersNarrow-Regular.woff2") format("woff2"),
+    url("../fonts/OwnersNarrow-Regular.woff") format("woff"),
+    url("../fonts/OwnersNarrow-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Owners";
+  src: url("../fonts/Owners-Medium.woff2") format("woff2"),
+    url("../fonts/Owners-Medium.woff") format("woff"),
+    url("../fonts/Owners-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Owners Narrow", sans-serif;
+}
+@include meta.load-css("custom.scss");
