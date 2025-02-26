@@ -119,7 +119,7 @@ add_action('wp_enqueue_scripts', 'enqueue_leaflet_scripts');
 
 function display_library_map() {
     ob_start(); ?>
-    <div id="library-map" class="w-full z-0" style="height: 640px !important"></div>
+    <div id="library-map" class="w-full z-0 iframe-wrapper" style="height: 640px !important"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
 			var map = L.map("library-map").setView([55.1694, 23.8813], 7);

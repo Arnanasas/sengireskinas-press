@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<main class="container mx-auto px-5 lg:px-0 pt-4 pb-10">
+<main class="container mx-auto px-5 lg:px-0 pb-10">
       <h1
-        class="text-primary-green text-center text-sm lg:text-lg pb-6 lg:pb-10 font-owners tracking-5p pt-4"
+        class="text-primary-green text-center text-sm lg:text-lg pb-6 lg:pb-10 font-owners tracking-5p"
       >
         LOKACIJOS
       </h1>

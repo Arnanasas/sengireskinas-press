@@ -104,6 +104,7 @@
         LOKACIJOS
       </h1>
 	  <div class="pt-6 lg:py-12">
+
 	  	<?php echo do_shortcode('[library_map]'); ?>
 	  </div>
 <?php

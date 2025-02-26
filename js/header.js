@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     onLeaveBack: () => {
       gsap.to(logo, {
-        width: "550px",
+        width: "834px",
         opacity: 1,
         duration: 0.3,
         ease: "sine.in",

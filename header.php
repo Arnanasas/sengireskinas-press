@@ -15,38 +15,46 @@
 	<?php do_action('tailpress_site_before'); ?>
 
 	<div id="page" class="min-h-screen flex flex-col">
-		<?php if (!is_single()) : ?>
-		<div class="fixed inset-0 pointer-events-none z-50 bg-repeat"
-			style="background-image: url('<?php echo get_template_directory_uri(); ?>/resources/images/dust.png'); opacity: 1">
-		</div>
+		<?php if (!is_single()): ?>
+			<div class="fixed inset-0 pointer-events-none z-50 bg-repeat" style="background-image: url('<?php echo get_template_directory_uri(); ?>/resources/images/dust.png'); opacity: 1;   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;">
+			</div>
 		<?php endif; ?>
 		<?php do_action('tailpress_header'); ?>
 
-		<?php if (!is_front_page()) : ?>
-		<header id="site-header" class="sticky top-0 mt-8 left-0 w-full transition-all duration-300 z-50"
-			style="background: none">
-			<div class="container mx-auto flex flex-col items-center py-4 transition-all duration-300"
-				style="color: #C8F27E;">
-				<nav class="main-navigation md:text-lg text-primary-green w-full">
-					<?php
-					wp_nav_menu(
-						array(
-							'container_id' => 'primary-menu',
-							'container_class' => 'nav-menu',
-							'menu_class' => 'nav-menu',
-							'theme_location' => 'primary',
-							'li_class' => 'menu-item uppercase',
-							'fallback_cb' => false,
-						)
-					);
-					?>
-				</nav>
-				<div class="flex justify-center pt-4 w-full">
-				<img id="site-logo" src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
-                alt="Sengires Kinas" class="transition-all duration-300 w-[550px]" />
+		<?php if (!is_front_page()): ?>
+			<header id="site-header" class="sticky top-0 left-0 w-full transition-all duration-300 z-50"
+				style="background: none">
+				<div class="container mx-auto flex flex-col items-center py-4 transition-all duration-300"
+					style="color: #C8F27E;">
+					<nav class="main-navigation md:text-lg text-primary-green w-full">
+						<?php
+						wp_nav_menu(
+							array(
+								'container_id' => 'primary-menu',
+								'container_class' => 'nav-menu',
+								'menu_class' => 'nav-menu',
+								'theme_location' => 'primary',
+								'li_class' => 'menu-item uppercase',
+								'fallback_cb' => false,
+							)
+						);
+						?>
+					</nav>
+					<div class="flex justify-center pt-2 w-full">
+						<a href="<?php echo home_url(); ?>">
+							<?php if (is_front_page() || is_page('pagrindinis')) : ?>
+								<img id="site-logo" src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
+									alt="Sengires Kinas" class="transition-all duration-300 w-[834px]" />
+							<?php else : ?>
+								<img id="site-logo-not-moving" src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
+									alt="Sengires Kinas" class="transition-all duration-300 w-[150px]" />
+							<?php endif; ?>
+						</a>
+					</div>
 				</div>
-			</div>
-		</header>
+			</header>
 		<?php endif; ?>
 
 

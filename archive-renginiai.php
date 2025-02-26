@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="flex justify-center">
         <h1
-          class="text-primary-green mb-6 lg:mb-16 text-sm lg:text-lg font-owners tracking-5p"
+          class="text-primary-green mb-6 lg:mb-16 text-sm lg:text-lg font-owners tracking-5p uppercase"
         >
           Renginiai
         </h1>
@@ -9,7 +9,7 @@
 	<div class="container my-8 mx-auto">
 
     <div
-        class="grid lg:grid-rows-2 lg:grid-cols-2 grid-cols-1 items-center lg:items-start justify-center lg:gap-y-28 gap-14 text-primary-green text-center text-xl"
+        class="flex flex-col lg:flex-row justify-center lg:items-start gap-14 lg:gap-10 mb-20 lg:mb-36 text-primary-green text-center text-xl"
       >
         <?php
         $args = array(
