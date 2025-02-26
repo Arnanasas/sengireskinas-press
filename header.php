@@ -24,10 +24,8 @@
 		<?php do_action('tailpress_header'); ?>
 
 		<?php if (!is_front_page()): ?>
-			<header id="site-header" class="sticky top-0 left-0 w-full transition-all duration-300 z-50"
-				style="background: none">
-				<div class="container mx-auto flex flex-col items-center py-4 transition-all duration-300"
-					style="color: #C8F27E;">
+			<header id="site-header" class="fixed top-0 left-0 w-full  z-50" style="background: none">
+				<div class="container mx-auto flex flex-col items-center py-4 " style="color: #C8F27E;">
 					<nav class="main-navigation md:text-lg text-primary-green w-full">
 						<?php
 						wp_nav_menu(
@@ -42,21 +40,23 @@
 						);
 						?>
 					</nav>
-					<div class="flex justify-center pt-2 w-full">
-						<a href="<?php echo home_url(); ?>">
-							<?php if (is_front_page() || is_page('pagrindinis')) : ?>
-								<img id="site-logo" src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
-									alt="Sengires Kinas" class="transition-all duration-300 w-[834px]" />
-							<?php else : ?>
-								<img id="site-logo-not-moving" src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
-									alt="Sengires Kinas" class="transition-all duration-300 w-[150px]" />
-							<?php endif; ?>
-						</a>
-					</div>
-				</div>
+					<?php if (is_front_page() || is_page('pagrindinis')): ?>
+						<div id="site-logo" class="flex justify-center pt-2 w-full px-2 md:px0 md:w-[831px]">
+							<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
+									alt="Sengires Kinas" class="w-[831px]" />
+							<?php else: ?>
+								<img id="site-logo-not-moving"
+									src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
+									alt="Sengires Kinas" class=" w-[150px]" />
+							</a>
+						</div>
+					<?php endif; ?>
+				<!-- </div> -->
 			</header>
 		<?php endif; ?>
 
 
-		<!-- <div id="content" class="site-content grow"> -->
-		<main class="container mx-auto px-5 lg:px-0 pt-8" id="main-content">
+		<main
+			class="container mx-auto px-5 lg:px-0 pt-[280px] <?php echo (is_front_page() || is_page('pagrindinis')) ? 'md:pt-[550px]' : 'md:pt-[180px]'; ?>"
+			id="main-content">
