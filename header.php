@@ -22,6 +22,7 @@
 		<?php endif; ?>
 		<?php do_action('tailpress_header'); ?>
 
+		<?php if (!is_front_page()) : ?>
 		<header id="site-header" class="sticky top-0 mt-8 left-0 w-full transition-all duration-300 z-50"
 			style="background: none">
 			<div class="container mx-auto flex flex-col items-center py-4 transition-all duration-300"
@@ -45,8 +46,8 @@
                 alt="Sengires Kinas" class="transition-all duration-300 w-[550px]" />
 				</div>
 			</div>
-
 		</header>
+		<?php endif; ?>
 
 
 		<!-- <div id="content" class="site-content grow"> -->

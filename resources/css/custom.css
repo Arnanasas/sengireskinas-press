@@ -80,4 +80,8 @@
   overflow: visible !important;
 }
 
+a[data-type=page] {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=custom.css.map */

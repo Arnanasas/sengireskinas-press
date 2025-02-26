@@ -101,4 +101,8 @@ body {
   overflow: visible !important;
 }
 
+a[data-type=page] {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=app.css.map */
