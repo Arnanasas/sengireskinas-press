@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="text-primary-green text-center leading-tight pb-20 text-lg lg:text-3xl lg:px-32 xl:px-80 tracking-5p ">
+<div class="text-primary-green text-center leading-tight pb-20 text-lg lg:text-3xl lg:max-w-[831px] mx-auto tracking-5p ">
 	<?php the_content(); ?>
 </div>
 
