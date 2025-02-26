@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        width: "width",
+        padding: "padding",
+      },
       colors: {
         primary: {
           green: "#C8F27E",

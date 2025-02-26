@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="flex justify-center">
         <h1
-          class="text-primary-green mb-6 lg:mb-16 text-sm lg:text-lg font-owners tracking-5p pt-4"
+          class="text-primary-green mb-6 lg:mb-16 text-sm lg:text-lg font-owners tracking-5p"
         >
           NAUJIENOS
         </h1>

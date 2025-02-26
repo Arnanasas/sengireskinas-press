@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<main class="article mx-auto px-5 md:px-0 pt-24 md:w-1/2 xl:max-w-[660px]">
+<main class="article mx-auto px-5 md:px-0 md:w-1/2 xl:max-w-[660px]">
 <div class="flex justify-center pt-4">
 
 		<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700 text-primary-green mb-6 lg:mb-8 text-sm lg:text-lg hover:underline font-owners tracking-5p"><?php echo get_the_date( 'Y.m.d' ); ?></time>

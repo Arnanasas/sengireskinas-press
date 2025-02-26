@@ -19,34 +19,19 @@ body {
   font-family: "Owners Narrow", sans-serif;
 }
 
-/* Header default state */
-#site-header {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Logo default size */
 #site-logo {
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: scale(3);
+  max-height: 330px;
+  height: auto;
+}
+
+.normal-logo {
+  width: 550px;
   opacity: 1;
-  position: absolute;
-  left: 50%;
-  top: 100px;
-  transform: translate(-50%, -50%) scale(1);
-  max-height: 120px; /* Adjust based on design */
+  transition: width 0.3s ease, opacity 0.3s ease;
 }
 
-/* Logo shrink effect */
-#site-header.scrolled #site-logo {
-  transform: translate(-50%, -50%) scale(0.6);
-  top: 100%; /* Adjust to move closer to nav links */
-  opacity: 0.9;
-}
-
-/* Header Shrinks */
-#site-header.scrolled {
-  padding: 10px 0;
-  backdrop-filter: blur(10px);
+.shrink-logo {
+  width: 150px;
 }
 
 .clip-image {
@@ -96,8 +81,8 @@ body {
   width: 100%;
   height: 0;
   padding-top: 56.25%; /* Aspect ratio for 16:9 video */
-  mask-image: url("../images/iframe-frame.png");
-  -webkit-mask-image: url("../images/iframe-frame.png");
+  mask-image: url("../resources/images/iframe-frame.png");
+  -webkit-mask-image: url("../resources/images/iframe-frame.png");
   mask-size: cover;
   mask-repeat: no-repeat;
   mask-position: center;

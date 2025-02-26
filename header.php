@@ -15,9 +15,11 @@
 	<?php do_action('tailpress_site_before'); ?>
 
 	<div id="page" class="min-h-screen flex flex-col">
+		<?php if (!is_single()) : ?>
 		<div class="fixed inset-0 pointer-events-none z-50 bg-repeat"
 			style="background-image: url('<?php echo get_template_directory_uri(); ?>/resources/images/dust.png'); opacity: 1">
 		</div>
+		<?php endif; ?>
 		<?php do_action('tailpress_header'); ?>
 
 		<header id="site-header" class="sticky top-0 mt-8 left-0 w-full transition-all duration-300 z-50"
@@ -38,9 +40,9 @@
 					);
 					?>
 				</nav>
-				<div id="site-logo" class="flex justify-center pt-4 w-full">
-					<img src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
-						alt="Sengires Kinas" class="normal-logo" />
+				<div class="flex justify-center pt-4 w-full">
+				<img id="site-logo" src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
+                alt="Sengires Kinas" class="transition-all duration-300 w-[550px]" />
 				</div>
 			</div>
 
@@ -48,4 +50,4 @@
 
 
 		<!-- <div id="content" class="site-content grow"> -->
-		<main class="container mx-auto px-5 lg:px-0 pt-24" id="main-content">
+		<main class="container mx-auto px-5 lg:px-0 pt-8" id="main-content">

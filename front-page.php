@@ -14,39 +14,48 @@
         ARTIMIAUSIAS SENGIRĖS KINAS
       </h1>
 
+      <?php
+      $args = array(
+          'post_type' => 'renginiai',
+          'posts_per_page' => 2,
+          'meta_key' => 'movie_date',
+          'orderby' => 'meta_value',
+          'order' => 'DESC'
+      );
+      $renginiai_query = new WP_Query($args);
+      $image_class_toggle = true; // To toggle between clip-image and clip-image2
+
+      if ($renginiai_query->have_posts()) :
+      ?>
       <div
         class="flex flex-col lg:flex-row justify-center lg:items-start gap-14 lg:gap-10 mb-20 lg:mb-36 text-primary-green text-center text-xl"
       >
+        <?php while ($renginiai_query->have_posts()) : $renginiai_query->the_post(); ?>
         <div class="flex justify-center flex-col lg:w-1/2 relative">
           <div class="relative">
-            <img
-              src="<?php echo get_template_directory_uri(); ?>/resources/images/image1.png"
-              alt="Forest"
-              class="object-cover clip-image"
-            />
+            <?php if (has_post_thumbnail()) : ?>
+              <img
+                src="<?php the_post_thumbnail_url(); ?>"
+                alt="<?php the_title_attribute(); ?>"
+                class="object-cover <?php echo $image_class_toggle ? 'clip-image' : 'clip-image2'; ?>"
+              />
+            <?php endif; ?>
           </div>
           <div class="pt-4 text-medium lg:text-large leading-none">
-            <p>2025.03.12</p>
-            <a href="#" class="hover:underline">„Sengirė“ su Kino Pavasariu</a>
+            <p><?php the_field('movie_date'); ?></p>
+            <a href="<?php the_permalink(); ?>" class="hover:underline"><?php the_title(); ?></a>
           </div>
         </div>
-        <div class="flex justify-center flex-col lg:w-1/2 relative">
-          <div class="relative">
-            <img
-              src="<?php echo get_template_directory_uri(); ?>/resources/images/image2.png"
-              alt="Forest"
-              class="object-cover clip-image2"
-            />
-          </div>
-          <div class="pt-4 text-medium lg:text-large leading-none">
-            <p>2025.03.12</p>
-            <a href="#" class="hover:underline">„Sengirė“ su Kino Pavasariu</a>
-          </div>
-        </div>
+        <?php 
+          $image_class_toggle = !$image_class_toggle;
+          endwhile; 
+          wp_reset_postdata(); 
+        ?>
       </div>
+      <?php endif; ?>
 	  <div class="flex justify-center">
         <a
-          href="#"
+          href="<?php echo get_permalink(get_option('page_for_posts')); ?>"
           class="text-primary-green mb-6 lg:mb-24 text-sm lg:text-lg hover:underline font-owners tracking-5p"
         >
           NAUJIENOS
