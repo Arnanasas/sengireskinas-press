@@ -45,18 +45,20 @@
 							<a href="<?php echo home_url('/pagrindinis'); ?>">
 								<img src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
 									alt="Sengires Kinas" class="w-[831px]" />
-							<?php else: ?>
+							</a>
+						<?php else: ?>
+							<a href="<?php echo home_url('/pagrindinis'); ?>">
 								<img id="site-logo-not-moving"
 									src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
 									alt="Sengires Kinas" class=" w-[150px]" />
 							</a>
 						</div>
 					<?php endif; ?>
-				<!-- </div> -->
+					<!-- </div> -->
 			</header>
 		<?php endif; ?>
 
 
 		<main
-			class="container mx-auto px-5 lg:px-0 pt-[280px] <?php echo (is_front_page() || is_page('pagrindinis')) ? 'md:pt-[550px]' : 'md:pt-[180px]'; ?>"
+			class="container mx-auto px-5 lg:px-0 pt-[280px] <?php echo (is_page('pakeisti i pagrindini') || is_page('pagrindinis')) ? 'md:pt-[550px]' : 'md:pt-[180px]'; ?>"
 			id="main-content">
