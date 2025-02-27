@@ -10,7 +10,7 @@ get_header();
           <img
             src="<?php the_post_thumbnail_url('full'); ?>"
             alt="Forest"
-            class="w-full h-full object-cover clip-image2"
+            class="w-full h-full object-cover aspect-[16/10] clip-image2"
           />
         </div>
         <div class="pt-4 lg:pt-6 text-medium lg:text-large leading-none">
@@ -92,7 +92,7 @@ get_header();
                         <img
                           src="<?php echo esc_url($image_url); ?>"
                           alt="Forest"
-                          class="w-full max-h-[500px] object-contain <?php echo $class; ?>"
+                          class="w-full max-h-[500px] aspect-[16/10] object-contain <?php echo $class; ?>"
                         />
                       </div>
                     </div>

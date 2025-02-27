@@ -34,7 +34,7 @@
               <img
                 src="<?php the_post_thumbnail_url(); ?>"
                 alt="<?php the_title_attribute(); ?>"
-                class="object-cover <?php echo $image_class_toggle ? 'clip-image' : 'clip-image2'; ?>"
+                class="object-cover aspect-[16/10 <?php echo $image_class_toggle ? 'clip-image' : 'clip-image2'; ?>"
               />
             <?php endif; ?>
           </div>
@@ -79,7 +79,7 @@
               <img
                 src="<?php the_post_thumbnail_url(); ?>"
                 alt="<?php the_title_attribute(); ?>"
-                class="w-full h-full object-cover <?php echo $image_class; ?>"
+                class="w-full h-full object-cover aspect-[16/10] <?php echo $image_class; ?>"
               />
             <?php endif; ?>
           </div>

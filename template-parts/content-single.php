@@ -13,7 +13,7 @@
 				<img
 					src="<?php the_post_thumbnail_url(); ?>"
 					alt="<?php the_post_thumbnail_caption(); ?>"
-					class="w-full h-full object-cover clip-image"
+					class="w-full h-full object-cover aspect-[16/10] clip-image"
 				/>
 			<?php endif; ?>
         </div>

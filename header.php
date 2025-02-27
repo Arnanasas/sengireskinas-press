@@ -24,8 +24,8 @@
 		<?php do_action('tailpress_header'); ?>
 
 		<?php if (!is_front_page()): ?>
-			<header id="site-header" class="fixed top-0 left-0 w-full  z-50" style="background: none">
-				<div class="container mx-auto flex flex-col items-center py-4 " style="color: #C8F27E;">
+			<header id="site-header" class="fixed top-0 left-0 w-full h-[80px] z-50" style="background: none">
+				<div class="container mx-auto flex flex-col items-center py-4 h-[80px] " style="color: #C8F27E;">
 					<nav class="main-navigation md:text-lg text-primary-green w-full">
 						<?php
 						wp_nav_menu(

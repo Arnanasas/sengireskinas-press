@@ -29,7 +29,7 @@
               <img
                 src="<?php the_post_thumbnail_url(); ?>"
                 alt="<?php the_title_attribute(); ?>"
-                class="w-full h-full object-cover <?php echo ($renginiai_query->current_post % 2 == 0) ? 'clip-image' : 'clip-image2'; ?>"
+                class="w-full h-full aspect-[16/10] object-cover <?php echo ($renginiai_query->current_post % 2 == 0) ? 'clip-image' : 'clip-image2'; ?>"
               />
             <?php endif; ?>
           </div>

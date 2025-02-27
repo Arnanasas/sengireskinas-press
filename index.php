@@ -8,7 +8,7 @@
       </div>
 	<div class="container my-8 mx-auto">
 
-  <div class="flex flex-wrap justify-center gap-10 px-9 lg:px-0 pb-16 text-primary-green text-center text-xl">
+  <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center px-9 lg:px-0 gap-10 pb-16 lg:pb-24 text-primary-green text-center text-xl">
     <?php wp_reset_query(); ?>
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
@@ -18,7 +18,7 @@
                         <img
                             src="<?php the_post_thumbnail_url(); ?>"
                             alt="<?php the_title_attribute(); ?>"
-                            class="w-full h-full object-cover clip-image"
+                            class="w-full h-full aspect-[16/10] object-cover clip-image"
                         />
                     <?php endif; ?>
                 </div>
