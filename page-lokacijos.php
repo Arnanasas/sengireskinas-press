@@ -7,7 +7,7 @@
       </h1>
 
       <div
-      class="text-primary-green leading-tight text-center text-lg lg:text-3xl lg:px-32 xl:px-80 tracking-5p"
+      class="text-primary-green leading-tight text-center text-lg lg:text-3xl lg:px-32 xl:px-80 tracking-5p entry-content"
 
       >
         <?php the_content(); ?>

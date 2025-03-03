@@ -17,13 +17,21 @@
             'posts_per_page' => -1,
             'meta_key' => 'movie_date',
             'orderby' => 'meta_value',
-            'order' => 'ASC'
+            'order' => 'ASC',
+            'meta_query' => array(
+              array(
+                  'key' => 'movie_date',
+                  'value' => date('Ymd'),
+                  'compare' => '>=',
+                  'type' => 'DATE'
+              )
+          )
         );
         $renginiai_query = new WP_Query($args);
         if ($renginiai_query->have_posts()) :
             while ($renginiai_query->have_posts()) : $renginiai_query->the_post();
         ?>
-        <div class="flex justify-center flex-col relative">
+        <div class="flex w-full h-full lg:w-1/2 justify-center flex-col relative">
           <div class="relative">
             <?php if (has_post_thumbnail()) : ?>
               <img

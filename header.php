@@ -44,13 +44,13 @@
 						<div id="site-logo" class="flex justify-center pt-2 w-full px-2 md:px0 md:w-[831px]">
 							<a href="<?php echo home_url('/pagrindinis'); ?>">
 								<img src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
-									alt="Sengires Kinas" class="w-[831px]" />
+									alt="Sengires Kinas" class="pt-2 w-[831px]" />
 							</a>
 						<?php else: ?>
 							<a href="<?php echo home_url('/pagrindinis'); ?>">
 								<img id="site-logo-not-moving"
 									src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
-									alt="Sengires Kinas" class=" w-[150px]" />
+									alt="Sengires Kinas" class="pt-2 w-[150px]" />
 							</a>
 						</div>
 					<?php endif; ?>

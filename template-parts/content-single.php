@@ -26,7 +26,7 @@
       </div>
 
 
-	<div class="text-primary-green text-sm lg:text-lg font-owners tracking-5p">
+	<div class="text-primary-green text-sm lg:text-lg font-owners tracking-5p entry-content">
 		<?php the_content(); ?>
 
 		<?php

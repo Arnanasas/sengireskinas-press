@@ -32,8 +32,8 @@ get_header();
         <p
           class="text-center text-lg lg:text-3xl tracking-5p pb-7 lg:pb-8 leading-tight"
         >
-          <?php the_field('genre'); ?><br />Režisierius:
-          <?php the_field('rezisierius'); ?>  
+          <?php the_field('genre'); ?>
+          <br /><?php the_field('rezisierius'); ?>  
         </p>
         <p class="text-center text-sm lg:text-lg font-owners tracking-5p">
           <?php if (get_field('prodiuseris')) : ?>
@@ -54,7 +54,7 @@ get_header();
           <?php if (get_field('scenarijus')) : ?>
             Scenarijus: <?php the_field('scenarijus'); ?><br />
           <?php endif; ?>
-          <div class="text-center text-sm lg:text-lg font-owners tracking-5p pt-4">
+          <div class="text-center text-sm lg:text-lg font-owners tracking-5p pt-4 entry-content">
           <?php the_content(); ?>
           </div>
         </p>
@@ -126,11 +126,13 @@ get_header();
             ></iframe>
           </div>
         </div>
+        <?php if (get_field('mokomoji_medziaga')) : ?>
         <h1
           class="text-center mb-6 lg:mb-10 text-sm lg:text-lg font-owners tracking-5p"
         >
           MOKOMOJI MEDŽIAGA
         </h1>
+        <?php endif; ?>
         <p
           class="text-center text-lg lg:text-3xl tracking-5p leading-tight mb-5 lg:mb-7"
         >

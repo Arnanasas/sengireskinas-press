@@ -84,4 +84,13 @@ a[data-type=page] {
   text-decoration: underline;
 }
 
+.entry-content p {
+  margin-bottom: 1.5rem;
+  line-height: 24px;
+}
+
+.nav-menu .current-menu-item {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=custom.css.map */

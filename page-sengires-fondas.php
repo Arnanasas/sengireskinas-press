@@ -9,7 +9,7 @@
       </div>
 
       <div
-        class="text-primary-green text-center text-sm lg:text-lg font-owners tracking-5p"
+        class="text-primary-green text-center text-sm lg:text-lg font-owners tracking-5p entry-content"
       >
         <?php the_content(); ?>
 </div>

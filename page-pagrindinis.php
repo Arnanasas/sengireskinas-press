@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="text-primary-green text-center leading-tight pb-20 text-lg lg:text-3xl lg:max-w-[831px] mx-auto tracking-5p ">
+<div class="text-primary-green text-center leading-tight! pb-20 text-lg lg:text-3xl lg:max-w-[831px] mx-auto tracking-5p entry-content">
 	<?php the_content(); ?>
 </div>
 
@@ -17,10 +17,18 @@
           'posts_per_page' => 2,
           'meta_key' => 'movie_date',
           'orderby' => 'meta_value',
-          'order' => 'DESC'
+          'order' => 'ASC',
+          'meta_query' => array(
+              array(
+                  'key' => 'movie_date',
+                  'value' => date('Ymd'),
+                  'compare' => '>=',
+                  'type' => 'DATE'
+              )
+          )
       );
       $renginiai_query = new WP_Query($args);
-      $image_class_toggle = true; // To toggle between clip-image and clip-image2
+      $image_class_toggle = true;
 
       if ($renginiai_query->have_posts()) :
       ?>

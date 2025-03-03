@@ -720,12 +720,12 @@ video {
   height: 3rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-\[80px\] {
   height: 80px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .max-h-\[500px\] {
@@ -788,10 +788,6 @@ video {
   flex-direction: column;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .items-center {
   align-items: center;
 }
@@ -818,10 +814,6 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .border-b {
@@ -1217,6 +1209,15 @@ body {
 }
 
 a[data-type=page] {
+  text-decoration: underline;
+}
+
+.entry-content p {
+  margin-bottom: 1.5rem;
+  line-height: 24px;
+}
+
+.nav-menu .current-menu-item {
   text-decoration: underline;
 }
 
