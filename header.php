@@ -18,7 +18,8 @@
 		<?php if (!is_single()): ?>
 			<div class="fixed inset-0 pointer-events-none z-50 bg-repeat" style="background-image: url('<?php echo get_template_directory_uri(); ?>/resources/images/dust.png'); opacity: 1;   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;">
+  background-repeat: repeat;
+  z-index: 9999999;">
 			</div>
 		<?php endif; ?>
 		<?php do_action('tailpress_header'); ?>
