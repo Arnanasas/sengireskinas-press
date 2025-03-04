@@ -23,7 +23,6 @@
 		<?php endif; ?>
 		<?php do_action('tailpress_header'); ?>
 
-		<?php if (!is_front_page()): ?>
 			<header id="site-header" class="fixed top-0 left-0 w-full h-[80px] z-50" style="background: none">
 				<div class="container mx-auto flex flex-col items-center py-4 h-[80px] " style="color: #C8F27E;">
 					<nav class="main-navigation md:text-lg text-primary-green w-full">
@@ -41,13 +40,13 @@
 						?>
 					</nav>
 					<?php if (is_front_page() || is_page('pagrindinis')): ?>
-						<div id="site-logo" class="flex justify-center pt-2 w-full px-2 md:px0 md:w-[831px]">
-							<a href="<?php echo home_url('/pagrindinis'); ?>">
+						<div id="site-logo" class="flex justify-center pt-[16px] xl:pt-[20px] w-full px-8 md:px0 md:w-[831px]">
+							<a href="<?php echo home_url(); ?>">
 								<img src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
 									alt="Sengires Kinas" class="pt-2 w-[831px]" />
 							</a>
 						<?php else: ?>
-							<a href="<?php echo home_url('/pagrindinis'); ?>">
+							<a href="<?php echo home_url(); ?>" class="pt-[16px] xl:pt-[20px]">
 								<img id="site-logo-not-moving"
 									src="<?php echo get_template_directory_uri(); ?>/resources/images/logo.svg"
 									alt="Sengires Kinas" class="pt-2 w-[150px]" />
@@ -56,9 +55,8 @@
 					<?php endif; ?>
 					<!-- </div> -->
 			</header>
-		<?php endif; ?>
 
 
 		<main
-			class="container mx-auto px-5 lg:px-0 <?php echo (is_page('pakeisti i pagrindini') || is_page('pagrindinis')) ? 'pt-[280px] md:pt-[550px]' : 'pt-[140px]'; ?>"
+			class="container mx-auto px-5 lg:px-0 <?php echo (is_front_page()) ? 'pt-[330px] sm:pt-[550px]' : 'pt-[190px] md:pt-[240px]'; ?>"
 			id="main-content">

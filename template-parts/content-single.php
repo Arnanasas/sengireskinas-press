@@ -1,8 +1,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <main class="article mx-auto px-5 md:px-0 md:w-1/2 xl:max-w-[660px]">
-<div class="flex justify-center pt-4">
+<div class="flex justify-center">
 
-		<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700 text-primary-green mb-6 lg:mb-8 text-sm lg:text-lg hover:underline font-owners tracking-5p"><?php echo get_the_date( 'Y.m.d' ); ?></time>
+		<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700 text-primary-green mb-6 text-sm lg:text-lg hover:underline font-owners tracking-5p lh-64-ls-5"><?php echo get_the_date( 'Y.m.d' ); ?></time>
       </div>
 
       <div
@@ -18,7 +18,7 @@
 			<?php endif; ?>
         </div>
         <div
-          class="pt-5 lg:pt-8 pb-8 lg:pb-12 text-medium lg:text-large leading-none"
+          class="pt-5 lg:pt-8 pb-8 lg:pb-12 text-medium lg:text-large leading-none lh-60-ls-0"
         >
 		<?php the_title( sprintf( '<h1 class=""><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
@@ -26,7 +26,7 @@
       </div>
 
 
-	<div class="text-primary-green text-sm lg:text-lg font-owners tracking-5p entry-content">
+	<div class="text-primary-green text-sm lg:text-lg font-owners tracking-5p entry-content lh-24-ls-5">
 		<?php the_content(); ?>
 
 		<?php

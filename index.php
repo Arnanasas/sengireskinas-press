@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <div class="flex justify-center">
         <h1
-          class="text-primary-green mb-6 lg:mb-16 text-sm lg:text-lg font-owners tracking-5p"
+          class="text-primary-green mb-6 text-sm lg:text-lg font-owners tracking-5p lh-64-ls-5"
         >
           NAUJIENOS
         </h1>
       </div>
-	<div class="container my-8 mx-auto">
+	<div class="container mx-auto">
 
   <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center px-9 lg:px-0 gap-10 pb-16 lg:pb-24 text-primary-green text-center text-xl">
     <?php wp_reset_query(); ?>
@@ -23,11 +23,11 @@
                     <?php endif; ?>
                 </div>
                 <div class="text-center">
-                    <p class="text-sm lg:text-lg pb-1 pt-4 lg:pt-6 font-owners tracking-5p">
+                    <p class="text-sm lg:text-lg pb-1 pt-4 lg:pt-6 font-owners tracking-5p lh-34-ls-5">
                         <?php echo get_the_date( 'Y.m.d' ); ?>
                     </p>
-                    <a href="<?php the_permalink(); ?>" class="text-lg lg:text-3xl hover:underline tracking-5p">
-                        <p class="leading-tight">
+                    <a href="<?php the_permalink(); ?>" class="text-lg lg:text-3xl hover:underline tracking-5p lh-34-ls-5">
+                        <p>
                             <?php the_title(); ?>
                         </p>
                     </a>

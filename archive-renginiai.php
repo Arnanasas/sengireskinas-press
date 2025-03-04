@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 <div class="flex justify-center">
         <h1
-          class="text-primary-green mb-6 lg:mb-16 text-sm lg:text-lg font-owners tracking-5p uppercase"
+          class="text-primary-green mb-6 text-sm lg:text-lg font-owners tracking-5p uppercase lh-64-ls-5"
         >
           Renginiai
         </h1>
       </div>
-	<div class="container my-8 mx-auto">
+	<div class="container mx-auto">
 
     <div
-        class="flex flex-col lg:flex-row justify-center lg:items-start gap-14 lg:gap-10 mb-20 lg:mb-36 text-primary-green text-center text-xl"
+        class="flex flex-col lg:flex-row justify-center lg:items-start gap-14 lg:gap-10 text-primary-green text-center text-xl"
       >
         <?php
         $args = array(
@@ -41,7 +41,7 @@
               />
             <?php endif; ?>
           </div>
-          <div class="pt-4 text-medium lg:text-large leading-none">
+          <div class="pt-4 text-medium lg:text-large leading-none lh-64-ls-2">
             <p><?php the_field('movie_date'); ?></p>
             <a href="<?php the_permalink(); ?>" class="hover:underline"><?php the_title(); ?></a>
           </div>

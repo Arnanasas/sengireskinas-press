@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 <main class="container mx-auto px-5 lg:px-0 pb-10">
       <h1
-        class="text-primary-green text-center text-sm lg:text-lg pb-6 lg:pb-10 font-owners tracking-5p"
+        class="text-primary-green text-center text-sm lg:text-lg pb-6 lg:pb-10 font-owners tracking-5p lh-64-ls-3"
       >
         LOKACIJOS
       </h1>
 
       <div
-      class="text-primary-green leading-tight text-center text-lg lg:text-3xl lg:px-32 xl:px-80 tracking-5p entry-content"
+      class="text-primary-green leading-tight text-center text-lg lg:text-3xl lg:px-32 xl:px-80 tracking-5p entry-content lh-24-ls-5"
 
       >
         <?php the_content(); ?>
@@ -18,7 +18,7 @@
       </div>
 
       <ul
-        class="font-owners text-primary-green text-center text-xs lg:text-lg tracking-5p"
+        class="font-owners text-primary-green text-center text-xs lg:text-lg tracking-5p lh-24-ls-5"
       >
         <?php
         $args = array(

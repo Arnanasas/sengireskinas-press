@@ -36,7 +36,7 @@
           <?php endif; ?>
 	  </div>
         <div class="lg:ml-auto lg:text-right">
-          <p class="text-primary-green text-xs">
+          <p class="text-primary-green text-xs lh-18-ls-5">
             Dizainas: Ugnė Balčiūnaitė<br />
             Svetainės dizainas: <a href="https://westcoast.lt" class="hover:underline" target="_blank">Edmundas Stundžius</a><br />
             Programavimas: <a href="https://demesysmulkmenai.lt" class="hover:underline" target="_blank">Dėmesys Smulkmenai</a>
@@ -95,7 +95,7 @@ flex-shrink-0
 -->
 
         <div class="lg:w-3/5 order-1 lg:order-2 flex flex-col xl:flex-row gap-x-4 mb-4">
-          <p class="text-primary-green text-sm lg:text-lg pb-8">
+          <p class="text-primary-green text-sm lg:text-lg pb-8 pr-0 xl:pr-[80px]">
             NAUJIENLAIŠKIS:
           </p>
           <?php echo do_shortcode('[contact-form-7 id="cf0432e" title="Mailer lite" do_not_autop="true"]'); ?>

@@ -96,6 +96,9 @@ a[data-type="page"] {
 .entry-content p {
   margin-bottom: 1.5rem;
   line-height: 24px;
+  @media (max-width: 768px) {
+    line-height: 18px;
+  }
 }
 
 .nav-menu .current-menu-item {
@@ -155,4 +158,91 @@ input[type=checkbox] {
 
 .lh-20 {
   line-height: 20px;
+}
+
+.lh-34-ls-5 {
+  line-height: 34px!important;
+  letter-spacing: 5%;
+
+  @media (max-width: 768px) {
+    line-height: 20px!important;
+  }
+}
+
+.lh-64-ls-2 {
+  line-height: 64px!important;
+  letter-spacing: 2%;
+
+  @media (max-width: 768px) {
+    line-height: 30px!important;
+  }
+}
+
+.lh-24-ls-5 {
+  line-height: 24px!important;
+  letter-spacing: 5%;
+
+  @media (max-width: 768px) {
+    line-height: 18px!important;
+  }
+}
+
+
+.wpcf7-email {
+  line-height: 24px!important;
+  letter-spacing: 5%;
+
+  @media (max-width: 768px) {
+    line-height: 18px!important;
+  }
+}
+
+.lh-64-ls-3 {
+  line-height: 64px!important;
+  letter-spacing: 3%;
+
+  @media (max-width: 768px) {
+    line-height: 18px!important;
+    letter-spacing: 5%;
+  }
+}
+
+.lh-64-ls-5 {
+  line-height: 64px!important;
+  letter-spacing: 5%;
+
+  @media (max-width: 768px) {
+    line-height: 18px!important;
+    letter-spacing: 5%;
+  }
+}
+
+
+.lh-60-ls-0 {
+  line-height: 60px!important;
+  letter-spacing: 0%;
+
+  @media (max-width: 768px) {
+    line-height: 30px!important;
+  }
+}
+
+.lh-62-ls-2 {
+  line-height: 62px!important;
+  letter-spacing: 2%;
+
+  @media (max-width: 768px) {
+    line-height: 30px!important;
+    letter-spacing: 0%;
+  }
+}
+
+.lh-18-ls-5 {
+  line-height: 18px!important;
+  letter-spacing: 5%;
+
+  @media (max-width: 768px) {
+    line-height: 16px!important;
+    letter-spacing: 5%;
+  }
 }
