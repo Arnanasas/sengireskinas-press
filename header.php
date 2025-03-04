@@ -60,5 +60,5 @@
 
 
 		<main
-			class="container mx-auto px-5 lg:px-0 pt-[280px] <?php echo (is_page('pakeisti i pagrindini') || is_page('pagrindinis')) ? 'md:pt-[550px]' : 'md:pt-[180px]'; ?>"
+			class="container mx-auto px-5 lg:px-0 <?php echo (is_page('pakeisti i pagrindini') || is_page('pagrindinis')) ? 'pt-[280px] md:pt-[550px]' : 'pt-[140px]'; ?>"
 			id="main-content">

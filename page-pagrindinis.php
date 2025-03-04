@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="text-primary-green text-center leading-tight! pb-20 text-lg lg:text-3xl lg:max-w-[831px] mx-auto tracking-5p entry-content">
+<div class="text-primary-green text-center leading-tight! pb-20 text-lg lg:text-3xl lg:max-w-[831px] mx-auto tracking-5p">
 	<?php the_content(); ?>
 </div>
 
@@ -98,7 +98,7 @@
               <?php echo get_the_date('Y.m.d'); ?>
             </p>
             <a href="<?php the_permalink(); ?>" class="text-lg lg:text-3xl hover:underline tracking-5p">
-              <p class="leading-tight">
+              <p class="lh-20">
                 <?php the_title(); ?>
               </p>
             </a>

@@ -1021,6 +1021,10 @@ video {
   padding-top: 280px;
 }
 
+.pt-\[140px\] {
+  padding-top: 140px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1331,6 +1335,10 @@ input[type=checkbox] {
   height: auto;
 }
 
+.lh-20 {
+  line-height: 20px;
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -1364,6 +1372,10 @@ input[type=checkbox] {
 
   .md\:pt-\[550px\] {
     padding-top: 550px;
+  }
+
+  .md\:pt-\[90px\] {
+    padding-top: 90px;
   }
 
   .md\:text-3xl {
