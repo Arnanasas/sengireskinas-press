@@ -122,19 +122,20 @@ function display_library_map() {
     <div id="library-map" class="w-full z-0 iframe-wrapper" style="height: 640px !important"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-			var map = L.map("library-map").setView([55.1694, 23.8813], 7);
+            var map = L.map("library-map").setView([55.1694, 23.8813], 7);
+            
             var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	subdomains: 'abcd',
-	maxZoom: 20
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 20
             });
             CartoDB_DarkMatter.addTo(map);
 
-			var libraryIcon = L.icon({
-                iconUrl: '<?php echo get_template_directory_uri(); ?>/resources/images/pin_leaflet.png', // Path to your custom pin
-                iconSize: [24, 28], // Size of the icon
-                iconAnchor: [12, 28], // Anchor point (center-bottom)
-                popupAnchor: [0, -28] // Adjusts popup position
+            var libraryIcon = L.icon({
+                iconUrl: '<?php echo get_template_directory_uri(); ?>/resources/images/pin_leaflet.png',
+                iconSize: [24, 28],
+                iconAnchor: [12, 28],
+                popupAnchor: [0, -28]
             });
 
             var libraries = [
@@ -157,15 +158,22 @@ function display_library_map() {
                 ?>
             ];
 
+            // Initialize the marker cluster group
+            var markers = L.markerClusterGroup();
+
             libraries.forEach(function(library) {
-                var marker = L.marker([library.lat, library.lng], { icon: libraryIcon }).addTo(map);
+                var marker = L.marker([library.lat, library.lng], { icon: libraryIcon });
                 marker.bindPopup("<b>" + library.name + "</b><br><a href='" + library.website + "' target='_blank'>Aplankyti puslapį</a>");
+                markers.addLayer(marker); // Add each marker to the cluster group
             });
+
+            map.addLayer(markers); // Add cluster group to the map
         });
     </script>
     <?php return ob_get_clean();
 }
 add_shortcode('library_map', 'display_library_map');
+
 
 function enqueue_gsap_scripts() {
     if (is_front_page() || is_page('pagrindinis')) {
@@ -175,6 +183,18 @@ function enqueue_gsap_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_gsap_scripts');
+
+// In functions.php
+function enqueue_leaflet_markercluster() {
+    // MarkerCluster CSS
+    wp_enqueue_style('leaflet-markercluster-css', 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css');
+    wp_enqueue_style('leaflet-markercluster-default-css', 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css');
+
+    // MarkerCluster JS
+    wp_enqueue_script('leaflet-markercluster-js', 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js', array('leaflet-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_leaflet_markercluster');
+
 
 function enqueue_swiper_scripts() {
     wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);

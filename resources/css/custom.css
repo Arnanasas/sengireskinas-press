@@ -42,7 +42,7 @@
 .nav-menu {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   font-family: "Owners", sans-serif;
   font-weight: medium;
   letter-spacing: 0.05em;
@@ -131,6 +131,12 @@ input[type=checkbox] {
 }
 .wpcf7 form .wpcf7-acceptance input[type=checkbox]:checked::before {
   display: block;
+}
+
+#site-logo {
+  max-width: 831px;
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=custom.css.map */
