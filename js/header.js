@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  const maxScale = 1; // Initial size
-  const minScale = 150 / 831; // Min logo scale ratio
-  const shrinkDistance = 415; // Scroll distance before full shrink
-  const maxHeaderScale = 1; // Full header size
-  const minHeaderScale = 0.6; // Min header scale (adjust as needed)
+  const shrinkDistance = 150;
 
-  gsap.set("#site-header", { willChange: "transform" }); // Prepares for smooth transformations
+  const logo = document.getElementById("site-logo");
+  const originalWidth = logo.offsetWidth;
+  const minScale = 150 / originalWidth;
 
-  gsap.to("#site-logo", {
+  gsap.set("#site-header", { willChange: "transform" });
+
+  gsap.to(logo, {
     scale: minScale,
     transformOrigin: "center top",
     scrollTrigger: {

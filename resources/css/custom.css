@@ -93,4 +93,44 @@ a[data-type=page] {
   text-decoration: underline;
 }
 
+.wpcf7-spinner {
+  display: none;
+}
+
+input::placeholder {
+  @apply text-primary-green;
+}
+
+input[type=checkbox] {
+  margin: 0;
+}
+
+.wpcf7-list-item {
+  margin: 0;
+}
+
+.wpcf7 form .wpcf7-acceptance input[type=checkbox] {
+  width: 22px;
+  height: 22px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #CDED88;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.wpcf7 form .wpcf7-acceptance input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  background-color: #CDED88;
+  display: none;
+}
+.wpcf7 form .wpcf7-acceptance input[type=checkbox]:checked::before {
+  display: block;
+}
+
 /*# sourceMappingURL=custom.css.map */

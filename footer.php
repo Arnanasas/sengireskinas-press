@@ -8,7 +8,7 @@
 <?php do_action( 'tailpress_content_after' ); ?>
 
 <footer
-      class="container mx-auto px-5 lg:px-0 pt-10 lg:pt-16 pb-9 font-owners tracking-5p" role="contentinfo"
+      class="container mx-auto px-5 lg:px-0 pt-10 lg:pt-16 pb-9 font-owners tracking-5p overflow:hidden" role="contentinfo"
     >
       <h2 class="text-primary-green text-sm lg:text-lg">DRAUGAI</h2>
       <img
@@ -68,11 +68,37 @@
             </div>
           </div>
         </div>
+<!--
+space-y-4
+flex
+w-full
+gap-2
+btn
+object-contain
+items-center
+text-sm
+bg-black
+text-white
+px-4
+py-2
+rounded
+input
+p-2
+border
+border-gray-300
+bg-transparent
+flex-nowrap
+min-w-0
+flex
+flex-grow
+flex-shrink-0
+-->
 
-        <div class="lg:w-3/5 order-1 lg:order-2">
+        <div class="lg:w-3/5 order-1 lg:order-2 flex flex-col xl:flex-row gap-x-4 mb-4">
           <p class="text-primary-green text-sm lg:text-lg pb-8">
             NAUJIENLAIŠKIS:
           </p>
+          <?php echo do_shortcode('[contact-form-7 id="cf0432e" title="Mailer lite" do_not_autop="true"]'); ?>
         </div>
       </div>
     </footer>

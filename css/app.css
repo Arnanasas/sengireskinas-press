@@ -696,6 +696,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline {
   display: inline;
 }
@@ -760,6 +764,10 @@ video {
   width: 100%;
 }
 
+.min-w-0 {
+  min-width: 0px;
+}
+
 .max-w-\[800px\] {
   max-width: 800px;
 }
@@ -770,6 +778,14 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .cursor-pointer {
@@ -786,6 +802,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .items-center {
@@ -808,16 +828,44 @@ video {
   gap: 3.5rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-x-hidden {
   overflow-x: hidden;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
 .bg-black {
@@ -828,6 +876,10 @@ video {
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-repeat {
@@ -842,6 +894,10 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-2 {
@@ -1221,6 +1277,54 @@ a[data-type=page] {
   text-decoration: underline;
 }
 
+.wpcf7-spinner {
+  display: none;
+}
+
+input::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(200 242 126 / var(--tw-text-opacity, 1));
+}
+
+input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(200 242 126 / var(--tw-text-opacity, 1));
+}
+
+input[type=checkbox] {
+  margin: 0;
+}
+
+.wpcf7-list-item {
+  margin: 0;
+}
+
+.wpcf7 form .wpcf7-acceptance input[type=checkbox] {
+  width: 22px;
+  height: 22px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #CDED88;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.wpcf7 form .wpcf7-acceptance input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  background-color: #CDED88;
+  display: none;
+}
+
+.wpcf7 form .wpcf7-acceptance input[type=checkbox]:checked::before {
+  display: block;
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -1459,6 +1563,10 @@ a[data-type=page] {
 
   .xl\:max-w-\[660px\] {
     max-width: 660px;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
   }
 
   .xl\:px-80 {
