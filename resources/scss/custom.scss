@@ -54,6 +54,7 @@
   font-family: "Owners", sans-serif;
   font-weight: medium;
   letter-spacing: 0.05em;
+  text-wrap: nowrap;
 
   @media (max-width: 768px) {
     gap: 0.5rem;
@@ -246,3 +247,4 @@ input[type=checkbox] {
     letter-spacing: 5%;
   }
 }
+

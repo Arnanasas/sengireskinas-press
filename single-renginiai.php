@@ -30,7 +30,7 @@ get_header();
         </h1>
         <p class="text-center pb-4 text-medium lg:text-large uppercase lh-62-ls-2"><?php the_field('movie_title'); ?></p>
         <p
-          class="text-center text-lg lg:text-3xl tracking-5p pb-7 lg:pb-8 leading-tight lh-24-ls-5"
+          class="text-center text-lg lg:text-3xl tracking-5p pb-7 lg:pb-8 leading-tight lh-34-ls-5"
         >
           <?php the_field('genre'); ?>
           <br /><?php the_field('rezisierius'); ?>  
