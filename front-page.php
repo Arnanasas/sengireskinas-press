@@ -48,7 +48,7 @@
           </div>
           <div class="pt-4 text-medium lg:text-large leading-none">
             <p class="lh-64-ls-2"><?php the_field('movie_date'); ?></p>
-            <a class="lh-64-ls-2" href="<?php the_permalink(); ?>" class="hover:underline"><?php the_title(); ?></a>
+            <a href="<?php the_permalink(); ?>" class="hover:underline lh-64-ls-2"><?php the_title(); ?></a>
           </div>
         </div>
         <?php 
