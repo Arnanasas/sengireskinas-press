@@ -68,7 +68,7 @@ get_header();
             <div class="swiper">
               <div class="mb-1 lg:mb-4 flex items-center justify-between">
                 <div>
-                  <h3 class="">FILMO NUOTRAUKOS</h3>
+                  <h2 class="">FILMO NUOTRAUKOS</h2>
                 </div>
                 <div>
                   <p class="button-prev mr-5 inline cursor-pointer">&lt;</p>
@@ -109,11 +109,11 @@ get_header();
       <div
         class="flex justify-center mx-auto flex-col lg:w-1/2 relative text-primary-green text-center pb-12 lg:pb-24"
       >
-        <h3
+        <h2
           class="text-center mb-6 lg:mb-8 text-sm lg:text-lg font-owners tracking-5p lh-64-ls-5"
         >
           FILMO TREILERIS
-        </h3>
+        </h2>
         <div class="relative mb-12 lg:mb-16">
           <div class="iframe-wrapper">
             <iframe

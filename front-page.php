@@ -63,7 +63,9 @@
           href="<?php echo get_permalink(get_option('page_for_posts')); ?>"
           class="text-primary-green mb-6 text-sm lg:text-lg hover:underline font-owners tracking-5p lh-64-ls-5"
         >
-          NAUJIENOS
+          <h2>
+			  NAUJIENOS
+			</h2>
         </a>
       </div>
 	  <div
@@ -106,7 +108,7 @@
         </div>
         <?php endwhile; wp_reset_postdata(); ?>
       </div>
-	  <h1
+	  <h2
         class="text-primary-green text-center text-sm lg:text-lg font-owners tracking-5p lh-64-ls-5"
       >
         LOKACIJOS
